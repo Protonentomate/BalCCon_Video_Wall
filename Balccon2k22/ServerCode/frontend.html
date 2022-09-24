@@ -57,8 +57,8 @@
 
                 //Itterate over every Pixel in canvas
                 for(let y=0;y<32;y++){
-                    for(let x=0;x<75;x++){
-
+                    tx=0;
+                    for(let x=74;x>0;x--){
                         //Fix offset since some rows are reversed
                         if(y==0){ty=3}
                         else if(y==1){ty=2}
@@ -96,7 +96,8 @@
                         //Calculate index in Buffer
                         const i=(y&1?(74-x):x)+(31-y)*75;
                         //Calculate index in Canvas
-                        const j=x+ty*75;
+                        const j=tx+ty*75;
+                        tx++;
                         //Put RGB Values in Buffer
                         buffer[i*3+2]=pixels[j*4+0]*pixels[j*4+0]>>>8;
                         buffer[i*3+1]=pixels[j*4+1]*pixels[j*4+1]>>>8;
