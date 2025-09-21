@@ -19,7 +19,14 @@ The project also includes a `videocue_server` that allows users to queue up YouT
 
 ## Software
 
-### `videocue_server`
+### Teensy Code
+
+The `TeensyCode` directory contains the Arduino sketches for the Teensy microcontroller.
+
+*   **`glediator.ino`:** This script allows the LED wall to be used as a screen. It receives pixel data from the mini PC over USB and displays it on the LEDs. This should be the default firmware flashed on the Teensy for interactive content.
+*   **`PlasmaAnimation.ino`:** This script provides a standalone plasma animation for the LED wall. It does not require any serial data input.
+
+### `videocue_server` (optional)
 
 The `videocue_server` is a BUN Node.js application that allows users to submit YouTube videos to a queue. The server then plays the videos in the order they were submitted.
 
@@ -35,13 +42,6 @@ The `videocue_server` is a BUN Node.js application that allows users to submit Y
     bun run
     ```
 The web server will be running on port 80. Users can submit new YouTube videos on the index page (`/`), and the currently cued video will be played on the viewer page (`/viewer.html`). By default, each video plays for a maximum of 5 minutes. If the queue is empty, a default video will loop.
-
-### Teensy Code
-
-The `TeensyCode` directory contains the Arduino sketches for the Teensy microcontroller.
-
-*   **`glediator.ino`:** This script allows the LED wall to be used as a screen. It receives pixel data from the mini PC over USB and displays it on the LEDs. This should be the default firmware flashed on the Teensy for interactive content.
-*   **`PlasmaAnimation.ino`:** This script provides a standalone plasma animation for the LED wall. It does not require any serial data input.
 
 ## Setup and Operation
 
@@ -67,8 +67,8 @@ The `TeensyCode` directory contains the Arduino sketches for the Teensy microcon
     *   On the desktop, there is a folder called `2k25`.
     *   Open a terminal, navigate to the `2k25` folder, and run the Python script:
         ```bash
-        cd ~/Desktop/2k25
-        python3 script.py
+        cd /home/brian/Desktop/2k25
+        python3 webcam.py
         ```
     *   This script captures the HDMI input, scales it to the correct resolution (32x75), and sends the pixel data to the Teensy over USB.
 
