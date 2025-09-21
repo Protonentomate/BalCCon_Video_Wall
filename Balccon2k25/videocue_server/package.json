@@ -1,0 +1,16 @@
+{
+  "name": "balccon-video-wall-cue",
+  "version": "1.0.0",
+  "description": "A simple video cueing system for the Balccon2k25.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "elysia": "^0.8.17",
+    "@elysiajs/static": "^0.8.1"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  }
+}

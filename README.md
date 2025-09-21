@@ -112,6 +112,9 @@ Where **Red connects to 5[V] and Black to Ground**
 
 <img src="media/power_group_wiring.jpg"> 
 
+## Balccon 2k25 Updated Diagramm:
+
+<img src="Balccon2k25/2k25_BalcconLEDwall_diagramm.jpg"> 
 
 
 ![](/Users/tomersiani/Desktop/BalCCon_Video_Wall/media/power_supply.jpeg)
